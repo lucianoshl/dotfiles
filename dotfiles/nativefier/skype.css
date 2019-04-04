@@ -1,0 +1,60 @@
+button[title='Video Call'],
+button[title='Audio Call'],
+button[title='Create new group'] {
+  display: none !important;
+}
+
+
+div[data-text-as-pseudo-element='|'] {
+  display: none !important;
+}
+
+button[title='Back'] {
+  margin-top: -17px;
+}
+
+div:has(button[title='Back']) {
+  height: 65px;
+}
+
+/* chat font */
+body > div > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div > div > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div > div > div > button > div > div {
+  font-size: 16px !important;
+}
+
+/* chat size */
+body > div > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div > div > div:nth-child(1) > div > div:nth-child(1) {
+  padding: 5px !important;
+  height: auto !important;
+}
+
+/* menu > chat contacts calls  */
+body > div > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) {
+  display: none !important;
+}
+
+/* screen button */
+body > div > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) {
+  display: none !important;
+}
+
+/* recent chat section */
+body > div > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(5) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) {
+  display: none !important;
+}
+
+/* favorites heading */
+body > div > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(5) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div > div.scrollViewport.scrollViewportV > div > div > div:nth-child(1) > div:nth-child(1) {
+  display: none !important;
+}
+
+/* favorites container */
+body > div > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(5) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div > div.scrollViewport.scrollViewportV > div > div > div:nth-child(1) {
+  height: auto !important;
+}
+
+/* back arrow size */
+body > div > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div > div > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button > div {
+  font-size: 25px !important;
+  margin-top: 8px !important;
+}

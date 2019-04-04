@@ -1,0 +1,41 @@
+actions:
+  post:
+    i3: i3-msg {0}
+    ruby: ruby {0}
+config:
+  backup: true
+  banner: true
+  create: true
+  dotpath: dotfiles
+  ignoreempty: false
+  keepdot: false
+  link_by_default: true
+  longkey: false
+  showdiff: false
+  workdir: ~/.config/dotdrop
+dotfiles:
+  f_ackrc:
+    dst: ~/.ackrc
+    link: true
+    src: ackrc
+  f_zprofile:
+    dst: ~/.zprofile
+    link: true
+    src: zprofile
+  i3_config:
+    actions:
+    - i3 restart
+    dst: ~/.config/i3/config
+    src: config/i3/config
+  nativefier:
+    actions:
+    - ruby dotfiles/nativefier/generate.rb
+    dst: ~/Applications/nativefier/apps.yml
+    src: nativefier/apps.yml
+profiles:
+  kerrigan-linux:
+    dotfiles:
+    - i3_config
+    - f_ackrc
+    - nativefier
+    - f_zprofile

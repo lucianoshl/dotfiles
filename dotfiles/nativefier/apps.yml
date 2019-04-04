@@ -1,0 +1,18 @@
+---
+skype:
+  url: https://web.skype.com
+  tray: 
+  single-instance: 
+whatsapp:
+  url: https://web.whatsapp.com
+slack:
+  url: https://algartelecomteam.slack.com
+  tray: 
+  single-instance: 
+todoist:
+  url: https://todoist.com
+  internal-urls: ".*.google.com.*"
+keep:
+  url: https://keep.google.com
+  internal-urls: ".*.google.com.*"
+hash: 571e7e792db4a438101b72b6c1fd4f1d
