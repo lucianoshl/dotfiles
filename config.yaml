@@ -18,6 +18,10 @@ dotfiles:
     dst: ~/.ackrc
     link: true
     src: ackrc
+  f_dunstrc:
+    dst: ~/.config/dunst/dunstrc
+    link: true
+    src: config/dunst/dunstrc
   f_zprofile:
     dst: ~/.zprofile
     link: true
@@ -25,13 +29,16 @@ dotfiles:
   i3_config:
     actions:
     - i3 restart
-    dst: ~/.config/i3/config
-    src: config/i3/config
+    dst: ~/.config/i3
+    src: config/i3
   nativefier:
     actions:
     - ruby dotfiles/nativefier/generate.rb
     dst: ~/Applications/nativefier/apps.yml
     src: nativefier/apps.yml
+  my_scripts:
+    dst: ~/Applications/scripts
+    src: scripts    
 profiles:
   kerrigan-linux:
     dotfiles:
@@ -39,3 +46,5 @@ profiles:
     - f_ackrc
     - nativefier
     - f_zprofile
+    - f_dunstrc
+    - my_scripts

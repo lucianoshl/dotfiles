@@ -3,10 +3,18 @@ skype:
   url: https://web.skype.com
   tray: 
   single-instance: 
+hangouts:
+  url: https://hangouts.google.com
+  internal-urls: ".*.google.com.*"
+  tray: 
+  single-instance: 
 whatsapp:
   url: https://web.whatsapp.com
+  tray: 
+  single-instance: 
 slack:
   url: https://algartelecomteam.slack.com
+  internal-urls: ".*.google.com.*"
   tray: 
   single-instance: 
 todoist:
@@ -15,4 +23,4 @@ todoist:
 keep:
   url: https://keep.google.com
   internal-urls: ".*.google.com.*"
-hash: 571e7e792db4a438101b72b6c1fd4f1d
+hash: c7f8f4ae4516af97ab601072b51660d7

@@ -1,0 +1,22 @@
+#!/usr/bin/ruby
+require 'json'
+
+system('sudo echo "start fix dns docker"')
+
+dns_ip = `nmcli dev show | grep 'IP4.DNS'`.split('\n').map{|a| a.split(' ').last }
+
+result = {}
+result["dns"] = dns_ip
+
+value =  result.to_json
+
+changed = File.read('/etc/docker/daemon.json') != value
+
+if (changed)
+  puts "dns changed"
+  puts "#{File.read('/etc/docker/daemon.json')} to #{value}"
+  File.write('/etc/docker/daemon.json',result.to_json)
+  `sudo systemctl restart docker`
+else
+  puts "Values not changed, current is #{value}"
+end

@@ -1,5 +1,6 @@
 --ignore-dir=.idea/
 --ignore-dir=node_modules/
+--ignore-dir=target/
 
 --smart-case
 

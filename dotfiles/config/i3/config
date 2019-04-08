@@ -1,9 +1,12 @@
 set $mod Mod4
-font pango:monospace 8
+# font pango:monospace 8
+font -*-ohsnap.icons-medium-*-*-*-14-*-*-*-*-*-*-*
 floating_modifier $mod 
 
 # start a terminal
 bindsym $mod+Return exec konsole
+#screen lock
+bindsym $mod+l exec i3lock -i ~/.config/i3/wallpapers/papers.co-md10-wallpaper-galaxy-eye-wonderful-stars-1366x768.png
 
 # kill focused window
 bindsym $mod+q kill
@@ -93,14 +96,37 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-# resize window (you can also use the mouse for that)
+bar {
+        position top
+        status_command py3status -c ~/.config/i3/i3status.conf
+}
+
+# scratchpad
+bindsym $mod+s scratchpad show
+bindsym $mod+shift+s move scratchpad
+bindsym $mod+ctrl+s sticky toggle
+bindsym $mod+x floating disable
+bindsym $mod+backslash resize set 320 240
+
+# monitors
+bindsym $mod+c move workspace to output left
+
+# audio
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioRaiseVolume exec amixer sset Master 5%+ unmute
+bindsym XF86AudioLowerVolume exec amixer sset Master 5%- unmute
+bindsym XF86AudioMute exec amixer -q set Master toggle
+
+# resize
 mode "resize" {
         bindsym Left resize shrink width 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
-
-        # back to normal: Enter or Escape or $mod+r
+        
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
@@ -108,24 +134,33 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-bar {
-        position top
-        status_command py3status
-}
+# windows rules
 
-# audio
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+for_window [instance="^code$"] move to workspace $ws4
 
-bindsym XF86AudioRaiseVolume exec amixer sset Master 5%+ unmute
-bindsym XF86AudioLowerVolume exec amixer sset Master 5%- unmute
-bindsym XF86AudioMute exec amixer -q set Master toggle
+for_window [instance="^skype-nativefier-.*$"] move to workspace $ws6
+for_window [instance="^slack-nativefier-.*$"] move to workspace $ws6
+for_window [instance="^telegram-desktop$"] move to workspace $ws6
 
+for_window [instance="^spotify$"] move to workspace $ws8
 
-bindsym $mod+s scratchpad show
-bindsym $mod+shift+s move scratchpad
-bindsym $mod+ctrl+s sticky toggle
-bindsym $mod+x floating disable
+for_window [instance="^keep-nativefier-.*$"] move to workspace $ws10
+for_window [instance="^todoist-nativefier-.*$"] move to workspace $ws10
+for_window [instance="^Steam$"] move to workspace $ws10
 
+# applications
+exec keep 
+exec todoist
+exec skype
+exec slack
+exec telegram-desktop
+exec nm-applet
+
+exec_always dunst
+exec_always feh --bg-scale ~/.config/i3/wallpapers/papers.co-md10-wallpaper-galaxy-eye-wonderful-stars-1366x768.jpg
+
+exec_always xset fp+ ~/.config/fontconfig/fonts/ohsnap-1.8.0
+exec_always xset fp+ ~/.config/fontconfig/fonts/tamzen-font-Tamzen-1.11.4/bdf
+exec_always xset fp+ ~/.config/fontconfig/fonts/gohufont
+
+for_window [class="\b(?:(?!URxvt)\w)+\b"] border pixel 0

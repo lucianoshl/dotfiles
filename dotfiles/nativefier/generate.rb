@@ -31,7 +31,7 @@ class AppGenerator
 
   def yaml_without_hash
     current = yaml
-    current['hash'] = ''
+    current.delete('hash')
     current
   end
 
@@ -56,7 +56,7 @@ class AppGenerator
     
     FileUtils.mkdir("#{app_folder}/bin")
     
-    yaml.map do |app,values|
+    yaml_without_hash.map do |app,values|
       command = "nativefier #{define_injects(app)} #{values['url']} --name #{app}"
       values.each do |k,v|
         next if k == 'url'
