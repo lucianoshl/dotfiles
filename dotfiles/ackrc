@@ -1,6 +1,9 @@
 --ignore-dir=.idea/
 --ignore-dir=node_modules/
 --ignore-dir=target/
+--ignore-dir=is:.idea
+
+--ignore-file=ext:iml
 
 --smart-case
 

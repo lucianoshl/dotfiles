@@ -160,7 +160,5 @@ exec_always dunst
 exec_always feh --bg-scale ~/.config/i3/wallpapers/papers.co-md10-wallpaper-galaxy-eye-wonderful-stars-1366x768.jpg
 
 exec_always xset fp+ ~/.config/fontconfig/fonts/ohsnap-1.8.0
-exec_always xset fp+ ~/.config/fontconfig/fonts/tamzen-font-Tamzen-1.11.4/bdf
-exec_always xset fp+ ~/.config/fontconfig/fonts/gohufont
 
 for_window [class="\b(?:(?!URxvt)\w)+\b"] border pixel 0
