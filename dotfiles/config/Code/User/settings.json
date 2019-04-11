@@ -1,0 +1,10 @@
+{
+    "window.menuBarVisibility": "toggle",
+    "workbench.sideBar.location": "left",
+    "editor.wordWrap": "on",
+    "files.exclude": {
+        "**/target": true
+    },
+    "editor.tabSize": 2,
+    "workbench.colorTheme": "shrek"
+}

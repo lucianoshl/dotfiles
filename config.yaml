@@ -22,6 +22,10 @@ dotfiles:
     dst: ~/.config/dunst/dunstrc
     link: true
     src: config/dunst/dunstrc
+  f_settings.json:
+    dst: ~/.config/Code/User/settings.json
+    link: true
+    src: config/Code/User/settings.json
   f_zprofile:
     dst: ~/.zprofile
     link: true
@@ -31,14 +35,14 @@ dotfiles:
     - i3 restart
     dst: ~/.config/i3
     src: config/i3
+  my_scripts:
+    dst: ~/Applications/scripts
+    src: scripts
   nativefier:
     actions:
     - ruby dotfiles/nativefier/generate.rb
     dst: ~/Applications/nativefier/apps.yml
     src: nativefier/apps.yml
-  my_scripts:
-    dst: ~/Applications/scripts
-    src: scripts    
 profiles:
   kerrigan-linux:
     dotfiles:
@@ -48,3 +52,4 @@ profiles:
     - f_zprofile
     - f_dunstrc
     - my_scripts
+    - f_settings.json

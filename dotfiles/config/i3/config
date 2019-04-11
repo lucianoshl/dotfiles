@@ -1,12 +1,13 @@
 set $mod Mod4
 # font pango:monospace 8
+# show ohsnap icons: for i in {50..255}; do  printf "\\$(printf '%03o' $i)\n" ; done
 font -*-ohsnap.icons-medium-*-*-*-14-*-*-*-*-*-*-*
 floating_modifier $mod 
 
 # start a terminal
 bindsym $mod+Return exec konsole
 #screen lock
-bindsym $mod+l exec i3lock -i ~/.config/i3/wallpapers/papers.co-md10-wallpaper-galaxy-eye-wonderful-stars-1366x768.png
+bindsym $mod+l exec i3lock -i ~/.config/i3/lockscreen/current.png
 
 # kill focused window
 bindsym $mod+q kill
@@ -96,11 +97,6 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-bar {
-        position top
-        status_command py3status -c ~/.config/i3/i3status.conf
-}
-
 # scratchpad
 bindsym $mod+s scratchpad show
 bindsym $mod+shift+s move scratchpad
@@ -157,8 +153,28 @@ exec telegram-desktop
 exec nm-applet
 
 exec_always dunst
-exec_always feh --bg-scale ~/.config/i3/wallpapers/papers.co-md10-wallpaper-galaxy-eye-wonderful-stars-1366x768.jpg
-
+exec_always feh --bg-scale ~/.config/i3/wallpapers/current.jpg
 exec_always xset fp+ ~/.config/fontconfig/fonts/ohsnap-1.8.0
 
+# colors & ui
+
 for_window [class="\b(?:(?!URxvt)\w)+\b"] border pixel 0
+
+bar {
+  position top
+  status_command py3status -c ~/.config/i3/i3status.conf
+  colors {
+    separator #666666
+    background #222222
+    statusline #dddddd
+    focused_workspace #0088CC #0088CC #ffffff
+    active_workspace #333333 #333333 #ffffff
+    inactive_workspace #333333 #333333 #888888
+    urgent_workspace #2f343a #900000 #ffffff
+  }
+}
+
+client.focused #0088CC #0088CC #ffffff #dddddd
+client.focused_inactive #333333 #333333 #888888 #292d2e
+client.unfocused #333333 #333333 #888888 #292d2e
+client.urgent #2f343a #900000 #ffffff #900000
