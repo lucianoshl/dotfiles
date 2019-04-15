@@ -60,6 +60,7 @@ class AppGenerator
       command = "nativefier #{define_injects(app)} #{values['url']} --name #{app}"
       values.each do |k,v|
         next if k == 'url'
+        v = (v || '').gsub(/\(/,'\(').gsub(/\)/,'\)').gsub(/\|/,'\|')
         command += " --#{k}#{ v.nil? || v.empty? ? '' : ('=' + v)}"
       end
       puts command

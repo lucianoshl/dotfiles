@@ -1,0 +1,26 @@
+#!/usr/bin/ruby
+
+if ARGV.length != 1 
+  raise Exception.new('require interface name')
+end
+
+interface = ARGV[0]
+gateway = `ip route | grep default | grep wlp6s0`.scan(/\d+\.\d+.\d+.\d+/).first
+
+address = ['web.whatsapp.com','photos.google.com','mega.nz','pluto.web.telegram.org']
+
+(1..9).map do |i|
+  address << "w#{i}.web.whatsapp.com"
+end
+
+
+ips = address.map do |address|
+  output = `nslookup #{address}`
+  output.scan(/Address.+\d.+/)[1].split(":").last.strip
+end
+
+ips << '149.154.0.0/16' # telegram
+
+ips.each do |ip|
+  puts "sudo ip route add #{ip} via #{gateway}"
+end

@@ -23,4 +23,7 @@ todoist:
 keep:
   url: https://keep.google.com
   internal-urls: ".*.google.com.*"
-hash: c7f8f4ae4516af97ab601072b51660d7
+evernote:
+  url: https://www.evernote.com/client/web
+  internal-urls: ".*(google|evernote).com.*"
+hash: 4ad781a699fd9e3686bb3f362f675d13
