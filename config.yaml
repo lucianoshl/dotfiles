@@ -30,6 +30,10 @@ dotfiles:
     dst: ~/.zprofile
     link: true
     src: zprofile
+  f_zshrc:
+    dst: ~/.zshrc
+    link: true
+    src: zshrc
   i3_config:
     actions:
     - i3 restart
@@ -53,3 +57,4 @@ profiles:
     - f_dunstrc
     - my_scripts
     - f_settings.json
+    - f_zshrc

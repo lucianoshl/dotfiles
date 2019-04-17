@@ -8,3 +8,4 @@
 --smart-case
 
 --type-set=properties=.properties
+--type-set=java=.java
