@@ -5,7 +5,7 @@ font -*-ohsnap.icons-medium-*-*-*-14-*-*-*-*-*-*-*
 floating_modifier $mod 
 
 # start a terminal
-bindsym $mod+Return exec konsole
+bindsym $mod+Return exec urxvt
 #screen lock
 bindsym $mod+l exec i3lock -i ~/.config/i3/lockscreen/current.png
 

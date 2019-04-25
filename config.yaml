@@ -26,6 +26,10 @@ dotfiles:
     dst: ~/.config/Code/User/settings.json
     link: true
     src: config/Code/User/settings.json
+  f_xdefaults:
+    dst: ~/.Xdefaults
+    link: true
+    src: Xdefaults
   f_zprofile:
     dst: ~/.zprofile
     link: true
@@ -58,3 +62,4 @@ profiles:
     - my_scripts
     - f_settings.json
     - f_zshrc
+    - f_xdefaults
