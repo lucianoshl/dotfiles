@@ -6,5 +6,5 @@
         "**/target": true
     },
     "editor.tabSize": 2,
-    "workbench.colorTheme": "shrek"
+    "workbench.colorTheme": "Gruvbox Dark (Hard)"
 }

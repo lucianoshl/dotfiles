@@ -105,7 +105,7 @@ bindsym $mod+s scratchpad show
 bindsym $mod+shift+s move scratchpad
 bindsym $mod+ctrl+s sticky toggle
 bindsym $mod+x floating disable
-bindsym $mod+backslash resize set 320 240
+bindsym $mod+backslash resize set 420 240
 
 # monitors
 bindsym $mod+c move workspace to output left
@@ -140,6 +140,8 @@ for_window [class="^jetbrains-idea-ce$"] move to workspace $ws3
 
 for_window [instance="^code$"] move to workspace $ws4
 
+for_window [instance="^DBeaver$"] move to workspace $ws5
+
 for_window [instance="^skype-nativefier-.*$"] move to workspace $ws6
 for_window [instance="^slack-nativefier-.*$"] move to workspace $ws6
 for_window [instance="^telegram-desktop$"] move to workspace $ws6
@@ -148,6 +150,7 @@ for_window [instance="^spotify$"] move to workspace $ws8
 
 for_window [instance="^keep-nativefier-.*$"] move to workspace $ws10
 for_window [instance="^todoist-nativefier-.*$"] move to workspace $ws10
+for_window [instance="^evernote-nativefier-.*$"] move to workspace $ws10
 
 for_window [instance="^Steam$"] move to workspace $ws11
 for_window [instance="^RimWorld.*$"] move to workspace $ws11
@@ -161,6 +164,7 @@ exec telegram-desktop
 exec nm-applet
 
 exec_always dunst
+exec_always pkill -9 xcompmgr ; xcompmgr
 exec_always feh --bg-scale ~/.config/i3/wallpapers/current.jpg
 exec_always xset fp+ ~/.config/fontconfig/fonts/ohsnap-1.8.0
 
@@ -186,3 +190,8 @@ client.focused #0088CC #0088CC #ffffff #dddddd
 client.focused_inactive #333333 #333333 #888888 #292d2e
 client.unfocused #333333 #333333 #888888 #292d2e
 client.urgent #2f343a #900000 #ffffff #900000
+
+# gaps
+gaps inner 10
+gaps outer 0
+smart_gaps on
