@@ -9,3 +9,4 @@
 
 --type-set=properties=.properties
 --type-set=java=.java
+--type-set=front=.js,.ftl,.html

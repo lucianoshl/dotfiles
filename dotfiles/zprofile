@@ -1,3 +1,5 @@
 PATH=$PATH:$HOME/Applications/nativefier/bin
 PATH=$PATH:$HOME/Applications/scripts
 PATH=$PATH:$HOME/.gem/ruby/2.6.0/bin
+
+PATH=$PATH:$HOME/Workspace/algar/algar-telecom-toolkit-user/exe

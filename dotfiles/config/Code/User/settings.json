@@ -6,5 +6,8 @@
         "**/target": true
     },
     "editor.tabSize": 2,
-    "workbench.colorTheme": "Gruvbox Dark (Hard)"
+    "workbench.colorTheme": "Gruvbox Dark (Hard)",
+    "files.associations": {
+        "*.ftl": "html"
+    }
 }
