@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/luciano/.oh-my-zsh"
+export ZSH="/home/$USER/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -66,6 +66,7 @@ ZSH_THEME="agnoster"
 plugins=(git dotenv)
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.zprofile
 
 # User configuration
 

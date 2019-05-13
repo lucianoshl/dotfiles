@@ -9,34 +9,39 @@ config:
   dotpath: dotfiles
   ignoreempty: false
   keepdot: false
-  link_by_default: true
+  link_dotfile_default: nolink
+  link_on_import: link
   longkey: false
   showdiff: false
   workdir: ~/.config/dotdrop
 dotfiles:
   f_ackrc:
     dst: ~/.ackrc
-    link: true
+    link: link
     src: ackrc
   f_dunstrc:
     dst: ~/.config/dunst/dunstrc
-    link: true
+    link: link
     src: config/dunst/dunstrc
   f_settings.json:
     dst: ~/.config/Code/User/settings.json
-    link: true
+    link: link
     src: config/Code/User/settings.json
   f_xdefaults:
     dst: ~/.Xdefaults
-    link: true
+    link: link
+    src: Xdefaults
+  f_xresources:
+    dst: ~/.Xresources
+    link: link
     src: Xdefaults
   f_zprofile:
     dst: ~/.zprofile
-    link: true
+    link: link
     src: zprofile
   f_zshrc:
     dst: ~/.zshrc
-    link: true
+    link: link
     src: zshrc
   i3_config:
     actions:
@@ -52,7 +57,7 @@ dotfiles:
     dst: ~/Applications/nativefier/apps.yml
     src: nativefier/apps.yml
 profiles:
-  kerrigan-linux:
+  kerrigan:
     dotfiles:
     - i3_config
     - f_ackrc
@@ -63,3 +68,4 @@ profiles:
     - f_settings.json
     - f_zshrc
     - f_xdefaults
+    - f_xresources

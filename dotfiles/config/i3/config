@@ -1,7 +1,7 @@
 set $mod Mod4
 # font pango:monospace 8
 # show ohsnap icons: for i in {50..255}; do  printf "\\$(printf '%03o' $i)\n" ; done
-font -*-ohsnap.icons-medium-*-*-*-14-*-*-*-*-*-*-*
+font -misc-fixed-medium-r-normal--10-120-75-75-C-70-iso10646-1
 floating_modifier $mod 
 
 # start a terminal
@@ -141,6 +141,7 @@ for_window [class="^jetbrains-idea-ce$"] move to workspace $ws3
 for_window [instance="^code$"] move to workspace $ws4
 
 for_window [instance="^DBeaver$"] move to workspace $ws5
+for_window [instance=".*squirrel.*"] move to workspace $ws5
 
 for_window [instance="^skype-nativefier-.*$"] move to workspace $ws6
 for_window [instance="^slack-nativefier-.*$"] move to workspace $ws6
