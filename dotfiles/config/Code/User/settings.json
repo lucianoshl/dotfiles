@@ -1,13 +1,14 @@
 {
-    "window.menuBarVisibility": "toggle",
+    "window.menuBarVisibility": "default",
     "workbench.sideBar.location": "left",
     "editor.wordWrap": "on",
     "files.exclude": {
         "**/target": true
     },
     "editor.tabSize": 2,
-    "workbench.colorTheme": "Gruvbox Dark (Hard)",
+    "workbench.colorTheme": "Default Light+",
     "files.associations": {
-        "*.ftl": "html"
+        "*.ftl": "html",
+        "*.erb": "xml"
     }
 }

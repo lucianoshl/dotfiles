@@ -1,9 +1,20 @@
+#zsh theme config
+DEFAULT_USER=$USER
+
+# cli
+EDITOR=/usr/bin/vim
+MAKEPKG="makepkg --skipinteg"
+
+# theme
+QT_QPA_PLATFORMTHEME="qt5ct"
+GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+
+# others
+BROWSER=/usr/bin/google-chrome-stable
+
+# path 
 PATH=$PATH:$HOME/Applications/nativefier/bin
+PATH=$PATH:$HOME/Applications/bin
 PATH=$PATH:$HOME/Applications/scripts
 PATH=$PATH:$HOME/.gem/ruby/2.6.0/bin
-
-PATH=$PATH:$HOME/Workspace/algar/algar-telecom-toolkit-user/exe
-
-EDITOR=vim
-
-MAKEPKG="makepkg --skipinteg"
+PATH=$PATH:$HOME/Workspace/algar/algar-telecom-toolkit-user/bin

@@ -39,6 +39,10 @@ dotfiles:
     dst: ~/.zprofile
     link: link
     src: zprofile
+  f_profile:
+    dst: ~/.profile
+    link: link
+    src: zprofile
   f_zshrc:
     dst: ~/.zshrc
     link: link
@@ -63,6 +67,7 @@ profiles:
     - f_ackrc
     - nativefier
     - f_zprofile
+    - f_profile
     - f_dunstrc
     - my_scripts
     - f_settings.json
