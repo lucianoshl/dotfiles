@@ -1,5 +1,6 @@
-#zsh theme config
+#zsh config
 DEFAULT_USER=$USER
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # cli
 EDITOR=/usr/bin/vim
@@ -18,3 +19,4 @@ PATH=$PATH:$HOME/Applications/bin
 PATH=$PATH:$HOME/Applications/scripts
 PATH=$PATH:$HOME/.gem/ruby/2.6.0/bin
 PATH=$PATH:$HOME/Workspace/algar/algar-telecom-toolkit-user/bin
+PATH=$PATH:$HOME/.local/bin/

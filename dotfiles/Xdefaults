@@ -8,13 +8,17 @@ Xft.lcdfilter: lcddefault
 
 Xcursor.theme: capitaine-cursors
 
-!URxvt*font: xft:Inconsolata Nerd Font Mono:pixelsize=15,xft:Inconsolata:pixelsize=15
-URxvt*font: xft:Inconsolata\ for\ Powerline:pixelsize=15,xft:Inconsolata:pixelsize=15
+!URxvt*font: xft:ohsnap7x14r Nerd Font:style=Medium
+!URxvt*font: xft:Droid Sans Mono for Powerline:pixelsize=13:antialias=true
+
+URxvt*font: -*-ohsnap.icons-medium-*-*-*-14-*-*-*-*-*-*-*
+! for i in {50..255}; do  printf "\\$(printf '%03o' $i)\n" ; done
+
 
 URxvt.letterSpace: 0
+URxvt.lineSpace: 0
 URxvt.saveLines: 102400
 URxvt.scrollBar: false
-
 
 ! https://github.com/morhetz/gruvbox-generalized
 *background: #282828

@@ -1,6 +1,7 @@
 actions:
   post:
     i3: i3-msg {0}
+    reload_resources: xrdb -merge ~/.Xresources
     ruby: ruby {0}
 config:
   backup: true
@@ -15,6 +16,10 @@ config:
   showdiff: false
   workdir: ~/.config/dotdrop
 dotfiles:
+  d_fonts:
+    dst: ~/.fonts
+    link: link
+    src: fonts
   f_ackrc:
     dst: ~/.ackrc
     link: link
@@ -23,24 +28,26 @@ dotfiles:
     dst: ~/.config/dunst/dunstrc
     link: link
     src: config/dunst/dunstrc
+  f_profile:
+    dst: ~/.profile
+    link: link
+    src: zprofile
   f_settings.json:
     dst: ~/.config/Code/User/settings.json
     link: link
     src: config/Code/User/settings.json
   f_xdefaults:
+    actions:
+    - reload_resources
     dst: ~/.Xdefaults
-    link: link
     src: Xdefaults
   f_xresources:
+    actions:
+    - reload_resources
     dst: ~/.Xresources
-    link: link
     src: Xdefaults
   f_zprofile:
     dst: ~/.zprofile
-    link: link
-    src: zprofile
-  f_profile:
-    dst: ~/.profile
     link: link
     src: zprofile
   f_zshrc:
@@ -74,3 +81,4 @@ profiles:
     - f_zshrc
     - f_xdefaults
     - f_xresources
+    - d_fonts

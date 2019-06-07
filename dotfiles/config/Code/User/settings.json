@@ -6,7 +6,7 @@
         "**/target": true
     },
     "editor.tabSize": 2,
-    "workbench.colorTheme": "Neon Vommit",
+    "workbench.colorTheme": "Neon Monokai",
     "files.associations": {
         "*.ftl": "html",
         "*.erb": "xml"

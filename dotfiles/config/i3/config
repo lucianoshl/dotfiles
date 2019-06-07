@@ -1,7 +1,8 @@
 set $mod Mod4
 # font pango:monospace 8
 # show ohsnap icons: for i in {50..255}; do  printf "\\$(printf '%03o' $i)\n" ; done
-font -misc-fixed-medium-r-normal--10-120-75-75-C-70-iso10646-1
+# font -misc-fixed-medium-r-normal--10-120-75-75-C-70-iso10646-1
+font -*-ohsnap.icons-medium-*-*-*-14-*-*-*-*-*-*-*
 floating_modifier $mod 
 
 # start a terminal
@@ -193,6 +194,6 @@ client.unfocused #333333 #333333 #888888 #292d2e
 client.urgent #2f343a #900000 #ffffff #900000
 
 # gaps
-gaps inner 10
-gaps outer 0
-smart_gaps on
+#gaps inner 10
+#gaps outer 0
+#smart_gaps on
